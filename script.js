@@ -51,8 +51,11 @@ function calculate() {
           amountEl_two.value = ((amountEl_one.value * rate)/5).toFixed(3); 
         }else{
           amountEl_two.value = ((amountEl_one.value * cfa).toFixed(3)); 
+       };
+         if(currency_one === base && currency_two=== base){
+            rateEl.innerText = `5 ${currency_one} =  5 ${currency_two} `;
+            amountEl_two.value = amountEl_one.value ; 
        }
-
     })
   
   }
